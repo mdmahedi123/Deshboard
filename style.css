@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-primary: #1e2be4;
+  --color-primary-variant: #0c207c;
+  --color-danger: #db3737;
+
+  --color-warning: #e0c738;
+  --color-success: #3acec6;
+  --color-white: #fff;
+  --color-bg: #f1f1f1;
+  --color-info-dark: #5f6c8f;
+  --color-info-light: #c6cadf;
+  --color-dark: #2c303d;
+  --color-dark-variant: #575b6d;
+  --color-light: rgba(153 160 197 / 0.18);
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+  --transition: all 300ms linear;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "poppins", sans-serif;
+  font-size: 0.8rem;
+  background: var(--color-bg);
+  color: var(--color-dark);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 97%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 12rem auto 17rem;
+  gap: 1.8rem;
+}
+
+a {
+  color: var(--color-dark);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 0.85rem;
+}
+
+h4 {
+  font-size: 0.8;
+}
+
+h5 {
+  font-size: 0.75rem;
+}
+
+small {
+  font-size: 0.7rem;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.text-muted {
+  color: var(--color-info-dark);
+}
+
+p {
+  color: var(--color-dark-variant);
+}
+
+strong {
+  color: var(--color-dark);
+}
+
+.danger {
+  color: var(--color-danger);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+/* =================================ASIDE================== */
+
+aside {
+  height: 100vh;
+}
+
+aside .logo {
+  margin-top: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+aside .logo img {
+  width: 2rem;
+}
+
+aside .sidebar {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 3rem;
+}
+
+aside .sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 2.5rem;
+  color: var(--color-info-dark);
+  position: relative;
+  transform: var(--transition);
+  padding: 1.2rem;
+}
+
+aside .sidebar a i {
+  font-size: 1.2rem;
+}
+
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 3.5rem;
+  width: 100%;
+}
+
+aside .sidebar a:hover {
+  background: var(--color-light);
+  color: var(--color-primary);
+}
+
+aside .sidebar a::before {
+  content: "";
+  height: 100%;
+  width: 4px;
+  background: var(--color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+aside .sidebar a:hover::before {
+  opacity: 1;
+}
+
+/* =======================================main================================= */
+
+main {
+  margin-top: 1.4rem;
+}
+
+main .date {
+  display: inline-block;
+  background-color: #e4e4e4;
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--border-radius-1);
+  margin-top: 0.8rem;
+}
+
+main .date input[type="date"] {
+  background: transparent;
+  color: var(--color-dark-variant);
+}
+
+main .insights {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  gap: 1rem;
+}
+
+main .insights > div {
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 2rem;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms linear;
+}
+
+main .insights > div:hover {
+  box-shadow: none;
+}
+
+main .sale .matireal-icons {
+  display: inline-block;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background: tomato;
+  border-radius: 50%;
+  position: relative;
+}
+
+main .sale .matireal-icons i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+main .insights h4 {
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+main .middel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+main .insights .progress {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+main .insights .progress svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+main .insights .sale .progress svg circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(6px, 6px);
+  stroke-dasharray: 190;
+  stroke-dashoffset: -30;
+}
+
+main .insights .expenses .progress svg circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(6px, 6px);
+  stroke-dasharray: 220;
+  stroke-dashoffset: -60;
+}
+
+main .insights .income .progress svg circle {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(6px, 6px);
+  stroke-dasharray: 150;
+  stroke-dashoffset: 40;
+}
+
+main .insights .progress .number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+main .insights .expenses .matireal-icons {
+  width: 3rem;
+  height: 3rem;
+  background: teal;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+}
+
+main .insights .expenses .matireal-icons i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+main .insights .income .matireal-icons {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: yellowgreen;
+}
+
+main .insights .income .matireal-icons i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.4rem;
+  color: var(--color-white);
+}
+
+main .insights small {
+  display: block;
+}
+
+main .recent-order {
+  margin: 1rem 0;
+}
+
+main .recent-order h2 {
+  margin-bottom: 0.8rem;
+}
+
+main .recent-order table {
+  width: 100%;
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+main .recent-order table:hover {
+  box-shadow: none;
+}
+
+main table tbody td {
+  height: 2rem;
+}
+
+/* =================================Right========================= */
+
+.right {
+  margin-top: 1.4rem;
+}
+
+.right .profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  text-align: right;
+}
+
+.right .recent-updates {
+  margin-top: 2rem;
+}
+
+.right .recent-updates h2 {
+  margin-bottom: 1rem;
+}
+
+.right .recent-updates .updates {
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.right .recent-updates .updates:hover {
+  box-shadow: none;
+}
+
+.right .recent-updates .updates .update {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+/* =====================analytics================ */
+
+.analytics {
+  margin-top: 2rem;
+}
+
+.analytics h2 {
+  margin-bottom: 1rem;
+}
+
+.right .analytics .online-items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.8rem;
+  transition: var(--transition);
+}
+
+.right .analytics .online-items:hover {
+  box-shadow: none;
+}
+
+.right .analytics i {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+.right .analytics .right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+
+.right .analytics .offline-items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.8rem;
+  transition: var(--transition);
+}
+
+.right .analytics .online-items:hover {
+  box-shadow: none;
+}
+
+.right .analytics .new-customer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: 1rem;
+  border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.8rem;
+  transition: var(--transition);
+}
+
+.right .analytics .new-customer:hover {
+  box-shadow: none;
+}
+
+.right .add-product {
+  display: flex;
+  background-color: transparent;
+  border: 2px dotted var(--color-primary);
+  padding: 1rem;
+  border-radius: var(--border-radius-2);
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.right .add-product .add {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right .add-product .add i {
+  font-size: 1.4rem;
+}
